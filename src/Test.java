@@ -9,5 +9,7 @@
  * @author john
  */
 public class Test {
-    System.out.println("Hello Jeinson!");
+    public static void main(String[] args) {
+            System.out.println("Hello Jeinson!");
+    }
 }
