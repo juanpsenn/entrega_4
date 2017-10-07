@@ -9,5 +9,5 @@
  * @author john
  */
 public class Test {
-    
+    System.out.println("Hello Jeinson!");
 }
