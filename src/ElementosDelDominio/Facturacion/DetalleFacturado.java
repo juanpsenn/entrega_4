@@ -1,17 +1,18 @@
+package ElementosDelDominio.Facturacion;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ElementosDelDominio.Facturacion;
 
 /**
  *
  * @author mickaelacrespo
  */
-public class DetalleConceptoFacturado {
+public class DetalleFacturado {
     
-    private int subtotal;
-    private DetalleFacturado detalleFacturado;
+    private String nombre;
+    private float costo;
     
 }
