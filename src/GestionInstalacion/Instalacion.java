@@ -17,25 +17,44 @@ public class Instalacion {
     private String fechaRetiro;
     private int nroOrdenInstalacion;
     private Medidor medidores[];
-    
+
+    public Instalacion(String fechaInstalacion, String fechaRetiro, int nroOrdenInstalacion, Medidor[] medidores) {
+        this.fechaInstalacion = fechaInstalacion;
+        this.fechaRetiro = fechaRetiro;
+        this.nroOrdenInstalacion = nroOrdenInstalacion;
+        this.medidores = medidores;
+    }
 
     public String getFechaInstalacion() {
         return fechaInstalacion;
+    }
+
+    public void setFechaInstalacion(String fechaInstalacion) {
+        this.fechaInstalacion = fechaInstalacion;
     }
 
     public String getFechaRetiro() {
         return fechaRetiro;
     }
 
-    public int getNroOrdenInstalacion() {
-        return nroOrdenInstalacion;
-    }
-
     public void setFechaRetiro(String fechaRetiro) {
         this.fechaRetiro = fechaRetiro;
     }
 
-    
-    
+    public int getNroOrdenInstalacion() {
+        return nroOrdenInstalacion;
+    }
+
+    public void setNroOrdenInstalacion(int nroOrdenInstalacion) {
+        this.nroOrdenInstalacion = nroOrdenInstalacion;
+    }
+
+    public Medidor[] getMedidores() {
+        return medidores;
+    }
+
+    public void setMedidores(Medidor[] medidores) {
+        this.medidores = medidores;
+    }
     
 }

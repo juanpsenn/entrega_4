@@ -14,7 +14,27 @@ package GestionInstalacion;
 public class Medidor {
     
     private int numero;
-    private Lectura lecturas[];
-    
+    private Lectura lecturas[];    
+
+    public Medidor(int numero, Lectura[] lecturas) {
+        this.numero = numero;
+        this.lecturas = lecturas;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public Lectura[] getLecturas() {
+        return lecturas;
+    }
+
+    public void setLecturas(Lectura[] lecturas) {
+        this.lecturas = lecturas;
+    }
     
 }

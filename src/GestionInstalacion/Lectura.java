@@ -33,39 +33,48 @@ public class Lectura {
         return estimada;
     }
 
+    public void setEstimada(float estimada) {
+        this.estimada = estimada;
+    }
+
     public String getFechaHoraLectura() {
         return fechaHoraLectura;
+    }
+
+    public void setFechaHoraLectura(String fechaHoraLectura) {
+        this.fechaHoraLectura = fechaHoraLectura;
     }
 
     public float getValorCorregido() {
         return valorCorregido;
     }
 
+    public void setValorCorregido(float valorCorregido) {
+        this.valorCorregido = valorCorregido;
+    }
+
     public float getValorLectura() {
         return valorLectura;
+    }
+
+    public void setValorLectura(float valorLectura) {
+        this.valorLectura = valorLectura;
     }
 
     public Estado getEstado() {
         return estado;
     }
 
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
     public Factura getFactura() {
         return factura;
     }
 
-    public void setEstimada(float estimada) {
-        this.estimada = estimada;
+    public void setFactura(Factura factura) {
+        this.factura = factura;
     }
 
-    public void setValorCorregido(float valorCorregido) {
-        this.valorCorregido = valorCorregido;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
-    
-    
-    
-    
 }
