@@ -3,20 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ElementosDelDominio.GestionInstalacion;
-
-import ElementosDelDominio.GestionClientes.CondicionTributaria;
+package GestionClientes;
 
 /**
  *
  * @author mickaelacrespo
  */
-public class Impuesto {
+public class CondicionTributaria {
     
     private String nombre;
-    private int montoFijo;
-    private CondicionTributaria condicionTributaria;
-    
-            
+    private float porcentajeImpuestoAplicable;
     
 }

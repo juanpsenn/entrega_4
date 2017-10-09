@@ -3,14 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ElementosDelDominio.GestionInstalacion;
+package GestionPropiedades;
+
+import GestionInstalacion.Impuesto;
 
 /**
  *
  * @author mickaelacrespo
  */
-public class Estado {
+public class Localidad {
     
-    public String ambito;
-    public String nombre;
+    private String nombre;
+    private Zona zonas[];
+    private Impuesto impuestosDeLocalidad[];
+    
+    
 }

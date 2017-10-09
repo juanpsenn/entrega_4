@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ElementosDelDominio.GestionPropiedades;
+package GestionInstalacion;
 
 /**
  *
  * @author mickaelacrespo
  */
-public class Zona {
+public class Estado {
     
-    private String nombre;
-    private Propiedad propiedades[];
+    public String ambito;
+    public String nombre;
 }

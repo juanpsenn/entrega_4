@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ElementosDelDominio.GestionInstalacion;
+package GestionInstalacion;
 
-import ElementosDelDominio.Facturacion.Factura;
+import GestionFacturacion.Factura;
 
 /**
  *

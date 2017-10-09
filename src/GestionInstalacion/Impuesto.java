@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ElementosDelDominio.GestionPropiedades;
+package GestionInstalacion;
 
-import ElementosDelDominio.GestionInstalacion.Impuesto;
+import GestionClientes.CondicionTributaria;
 
 /**
  *
  * @author mickaelacrespo
  */
-public class Localidad {
+public class Impuesto {
     
     private String nombre;
-    private Zona zonas[];
-    private Impuesto impuestosDeLocalidad[];
+    private int montoFijo;
+    private CondicionTributaria condicionTributaria;
     
+            
     
 }
