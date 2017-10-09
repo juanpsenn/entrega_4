@@ -5,13 +5,15 @@
  */
 package GestionInstalacion;
 
+import GestionFacturacion.IIterador;
+
 
 
 /**
  *
  * @author mickaelacrespo
  */
-public class Medidor {
+public class Medidor implements GestionFacturacion.IAgregado {
     
     private int numero;
     private Lectura lecturas[];    
@@ -35,6 +37,11 @@ public class Medidor {
 
     public void setLecturas(Lectura[] lecturas) {
         this.lecturas = lecturas;
+    }
+
+    @Override
+    public IIterador crearIterador(Object[] elementos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
