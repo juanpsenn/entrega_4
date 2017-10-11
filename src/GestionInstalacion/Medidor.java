@@ -6,6 +6,7 @@
 package GestionInstalacion;
 
 import GestionFacturacion.IIterador;
+import GestionFacturacion.IteradorLectura;
 
 
 
@@ -41,7 +42,8 @@ public class Medidor implements GestionFacturacion.IAgregado {
 
     @Override
     public IIterador crearIterador(Object[] elementos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        IteradorLectura il = new IteradorLectura(lecturas); 
+        return il;
     }
     
 }

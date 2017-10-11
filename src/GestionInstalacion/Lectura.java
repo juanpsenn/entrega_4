@@ -6,7 +6,7 @@
 package GestionInstalacion;
 
 import GestionFacturacion.Factura;
-
+import java.util.Date;
 /**
  *
  * @author mickaelacrespo
@@ -14,13 +14,13 @@ import GestionFacturacion.Factura;
 public class Lectura {
     
     private float estimada;
-    private String fechaHoraLectura;
+    private Date fechaHoraLectura;
     private float valorCorregido;
     private float valorLectura;
     private Estado estado;
     private Factura factura;
 
-    public Lectura(float estimada, String fechaHoraLectura, float valorCorregido, float valorLectura, Estado estado, Factura factura) {
+    public Lectura(float estimada, Date fechaHoraLectura, float valorCorregido, float valorLectura, Estado estado, Factura factura) {
         this.estimada = estimada;
         this.fechaHoraLectura = fechaHoraLectura;
         this.valorCorregido = valorCorregido;
@@ -37,11 +37,11 @@ public class Lectura {
         this.estimada = estimada;
     }
 
-    public String getFechaHoraLectura() {
+    public Date getFechaHoraLectura() {
         return fechaHoraLectura;
     }
 
-    public void setFechaHoraLectura(String fechaHoraLectura) {
+    public void setFechaHoraLectura(Date fechaHoraLectura) {
         this.fechaHoraLectura = fechaHoraLectura;
     }
 

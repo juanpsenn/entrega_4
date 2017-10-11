@@ -16,45 +16,39 @@ public class IteradorLectura implements IIterador {
     private GestionInstalacion.Lectura elementos[];
     private int posicion;
 
-    public IteradorLectura(Lectura[] elementos, int posicion) {
+    public IteradorLectura(Lectura[] elementos) {
+//        int n = elementos.length;
+//        this.elementos = new Lectura[n];
         this.elementos = elementos;
-        this.posicion = posicion;
+        this.posicion = 0;
     }
 
-    public Lectura[] getElementos() {
-        return elementos;
-    }
-
-    public void setElementos(Lectura[] elementos) {
-        this.elementos = elementos;
-    }
 
     public int getPosicion() {
         return posicion;
     }
-
-    public void setPosicion(int posicion) {
-        this.posicion = posicion;
-    }
             
     @Override
     public void first() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.posicion = 0;
     }
 
     @Override
     public void next() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.posicion ++;
     }
 
     @Override
     public boolean hasNext() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(elementos[posicion++] == null){
+            return false;
+        }
+        return true;
     }
 
     @Override
     public Object current() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return elementos[posicion];
     }
     
 }

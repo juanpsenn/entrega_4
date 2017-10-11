@@ -5,21 +5,23 @@
  */
 package GestionFacturacion;
 
+import java.util.Date;
+
 /**
  *
  * @author mickaelacrespo
  */
 public class PeriodoFacturacion {
-    
-    private String fechaDesde;
-    private String fechaHasta;
+
+    private Date fechaDesde;
+    private Date fechaHasta;
     private String nombrePeriodo;
 
-    public String getFechaDesde() {
+    public Date getFechaDesde() {
         return fechaDesde;
     }
 
-    public String getFechaHasta() {
+    public Date getFechaHasta() {
         return fechaHasta;
     }
 
@@ -27,18 +29,16 @@ public class PeriodoFacturacion {
         return nombrePeriodo;
     }
 
-    public void setFechaDesde(String fechaDesde) {
+    public void setFechaDesde(Date fechaDesde) {
         this.fechaDesde = fechaDesde;
     }
 
-    public void setFechaHasta(String fechaHasta) {
+    public void setFechaHasta(Date fechaHasta) {
         this.fechaHasta = fechaHasta;
     }
 
     public void setNombrePeriodo(String nombrePeriodo) {
         this.nombrePeriodo = nombrePeriodo;
     }
-    
-    
-    
+
 }
