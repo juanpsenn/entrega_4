@@ -27,5 +27,8 @@ public class Propiedad {
     public float[] buscarMontosBasicos() {
         return servicio.buscarMontosBasicos();
     }
-
+    
+    public Object[] buscarDatosClientes() {
+        return servicio.buscarDatosCliente();
+    }
 }
