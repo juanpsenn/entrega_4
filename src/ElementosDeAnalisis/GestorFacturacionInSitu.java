@@ -19,9 +19,28 @@ public class GestorFacturacionInSitu {
     private Date fechaActual;
     private PeriodoFacturacion periodoActual;
     private Lectura lecturaActual;
+    private float valorLecturaActual;
+    private float montoBasico;
+    private float m3Basico;
 
-    public void generarFacturacionInSitu(PeriodoFacturacion[] pf) {
+    public void generarFacturacionInSitu(PeriodoFacturacion[] pf, Propiedad p) {
         getPeriodoActual(pf);
+        buscarDatosPropiedad();
+        buscarDatosCliente();
+        buscarLecturaAnterior();
+        buscarDatosLecturaActual();
+        calcularConsumoFacturado();
+        buscarMontoBasico(p);
+        calcularDiasDeLectura();
+        verificarCalculoExcedente();
+        verificarBonificaciones();
+        buscarImpuestos();
+        calcularConecptosDeFacturacion();
+        calcularTotalFactura();
+        generarFactura();
+        imprimirFactura();
+        finCU();
+
     }
 
 //    Metodo sin sentido, durante la implementacion nos dimos cuenta que era innecesario
@@ -43,6 +62,67 @@ public class GestorFacturacionInSitu {
     }
 
     private void buscarDatosPropiedad() {
+
+    }
+
+    private void buscarDatosCliente() {
+
+    }
+
+    private void buscarLecturaAnterior() {
+
+    }
+
+    private void buscarDatosLecturaActual() {
+        valorLecturaActual = lecturaActual.getValorCorregido();
+    }
+
+    private void calcularConsumoFacturado() {
+
+    }
+
+    private void calcularDiasDeLectura() {
+
+    }
+
+    private void buscarMontoBasico(Propiedad p) {
+        float[] n = new float[2];
+
+        n = p.buscarMontosBasicos();
+        m3Basico = n[0];
+        montoBasico = n[1];
+
+    }
+
+    private void verificarCalculoExcedente() {
+
+    }
+
+    private void verificarBonificaciones() {
+
+    }
+
+    private void buscarImpuestos() {
+
+    }
+
+    private void calcularConecptosDeFacturacion() {
+
+    }
+
+    private void calcularTotalFactura() {
+
+    }
+
+    private void generarFactura() {
+
+    }
+
+    private void imprimirFactura() {
+
+    }
+
+    private void finCU() {
 
     }
 

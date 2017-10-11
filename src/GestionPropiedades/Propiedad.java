@@ -12,13 +12,19 @@ import GestionServicio.Servicio;
  * @author mickaelacrespo
  */
 public class Propiedad {
-    
+
     private String calle;
     private String departamento;
     private int nroIdentificacionCatastral;
     private int numero;
     private int piso;
     private Servicio servicio;
+
     
     
+    
+    public float[] buscarMontosBasicos() {
+        return servicio.buscarMontosBasicos();
+    }
+
 }
