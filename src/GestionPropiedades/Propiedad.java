@@ -20,6 +20,10 @@ public class Propiedad {
     private int piso;
     private Servicio servicio;
 
+    public int getNroIdentificacionCatastral() {
+        return nroIdentificacionCatastral;
+    }
+
     
     
     

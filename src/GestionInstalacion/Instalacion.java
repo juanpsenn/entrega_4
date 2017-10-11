@@ -6,6 +6,7 @@
 package GestionInstalacion;
 
 import GestionInstalacion.Medidor;
+import GestionPropiedades.Propiedad;
 
 /**
  *
@@ -17,6 +18,8 @@ public class Instalacion {
     private String fechaRetiro;
     private int nroOrdenInstalacion;
     private Medidor medidores[];
+        //Atributos que estan solo porque no hay base de datos
+    private Propiedad propiedad;
 
     public Instalacion(String fechaInstalacion, String fechaRetiro, int nroOrdenInstalacion, Medidor[] medidores) {
         this.fechaInstalacion = fechaInstalacion;
@@ -55,6 +58,14 @@ public class Instalacion {
 
     public void setMedidores(Medidor[] medidores) {
         this.medidores = medidores;
+    }
+    
+    public Object[] buscarDatosPropiedad(){
+        Object[] n = new Object[2];
+        n[0] = propiedad.getNroIdentificacionCatastral();
+        n[1] = propiedad;
+        
+        return n;
     }
     
 }

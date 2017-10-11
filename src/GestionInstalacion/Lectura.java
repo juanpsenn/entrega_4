@@ -19,6 +19,8 @@ public class Lectura {
     private float valorLectura;
     private Estado estado;
     private Factura factura;
+    //Metodos que estan debido a que no hay base de datos
+    private Medidor medidor;
 
     public Lectura(float estimada, Date fechaHoraLectura, float valorCorregido, float valorLectura, Estado estado, Factura factura) {
         this.estimada = estimada;
@@ -76,5 +78,7 @@ public class Lectura {
     public void setFactura(Factura factura) {
         this.factura = factura;
     }
-
+public Object[] buscarDatosPropiedad(){
+    return medidor.buscarDatosPropiedad();
+}
 }

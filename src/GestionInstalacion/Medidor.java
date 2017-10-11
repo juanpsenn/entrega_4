@@ -18,6 +18,8 @@ public class Medidor implements GestionFacturacion.IAgregado {
     
     private int numero;
     private Lectura lecturas[];    
+    //Atributos que estan solo porque no hay base de datos
+    private Instalacion instalacion;
 
     public Medidor(int numero, Lectura[] lecturas) {
         this.numero = numero;
@@ -46,4 +48,7 @@ public class Medidor implements GestionFacturacion.IAgregado {
         return il;
     }
     
+    public Object[] buscarDatosPropiedad(){
+        return instalacion.buscarDatosPropiedad();
+    }
 }

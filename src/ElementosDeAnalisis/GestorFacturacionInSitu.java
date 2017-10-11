@@ -19,6 +19,8 @@ public class GestorFacturacionInSitu {
     private Date fechaActual;
     private PeriodoFacturacion periodoActual;
     private Lectura lecturaActual;
+    private Propiedad propiedad;
+    private int nroIDCatastral;
     private float valorLecturaActual;
     private float montoBasico;
     private float m3Basico;
@@ -62,7 +64,10 @@ public class GestorFacturacionInSitu {
     }
 
     private void buscarDatosPropiedad() {
-
+     Object[] n = lecturaActual.buscarDatosPropiedad();
+     nroIDCatastral = (Integer) n[0];
+     propiedad = (Propiedad) n[1];
+     
     }
 
     private void buscarDatosCliente() {
