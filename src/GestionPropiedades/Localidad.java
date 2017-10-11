@@ -17,7 +17,7 @@ public class Localidad {
     private Zona zonas[];
     private Impuesto impuestosDeLocalidad[];
 
-    public Object[] buscarImpuestos(String condicionTributaria) {
+    public Object[][] buscarImpuestos(String condicionTributaria) {
         Object[][] valores = new Object[2][impuestosDeLocalidad.length];
 
         for (int i = 0; i < impuestosDeLocalidad.length; i++) {

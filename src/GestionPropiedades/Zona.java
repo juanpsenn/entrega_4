@@ -13,4 +13,11 @@ public class Zona {
     
     private String nombre;
     private Propiedad propiedades[];
+        //Atributos que estan debido a que no hay base de datos
+    private Localidad localidad;
+    
+    
+    public Object[][] buscarImpuestos(String condicionTributaria) {
+        return localidad.buscarImpuestos(condicionTributaria);
+    }    
 }
