@@ -6,13 +6,14 @@
 package GestionFacturacion;
 
 import GestionInstalacion.Lectura;
+import java.util.Date;
 
 /**
  *
  * @author john
  */
 public class IteradorLectura implements IIterador {
-    
+
     private GestionInstalacion.Lectura elementos[];
     private int posicion;
 
@@ -23,11 +24,10 @@ public class IteradorLectura implements IIterador {
         this.posicion = 0;
     }
 
-
     public int getPosicion() {
         return posicion;
     }
-            
+
     @Override
     public void first() {
         this.posicion = 0;
@@ -35,12 +35,12 @@ public class IteradorLectura implements IIterador {
 
     @Override
     public void next() {
-        this.posicion ++;
+        this.posicion++;
     }
 
     @Override
     public boolean hasNext() {
-        if(elementos[posicion++] == null){
+        if (elementos[posicion++] == null) {
             return false;
         }
         return true;
@@ -50,5 +50,17 @@ public class IteradorLectura implements IIterador {
     public Object current() {
         return elementos[posicion];
     }
-    
+
+    public Date getFechaHoraLectura(int i) {
+        return elementos[i].getFechaHoraLectura();
+    }
+
+    public boolean cumpleFiltros(Lectura actual, Lectura siguiente, Lectura lecturaActual) {
+        if (actual.getFechaHoraLectura().before(siguiente.getFechaHoraLectura()) || actual.getFechaHoraLectura().equals(lecturaActual.getFechaHoraLectura())) {
+            return false;
+        } else {
+            return true;
+        }
+
+    }
 }

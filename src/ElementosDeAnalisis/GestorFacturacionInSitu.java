@@ -18,10 +18,14 @@ public class GestorFacturacionInSitu {
 
     private Date fechaActual;
     private PeriodoFacturacion periodoActual;
+    //Lecturas
+    //LecturaActual
     private Lectura lecturaActual;
+    private float valorLecturaActual;
+    private Lectura lecturaAnterior;
+    //Propieda
     private Propiedad propiedad;
     private int nroIDCatastral;
-    private float valorLecturaActual;
     private float montoBasico;
     private float m3Basico;
     //Datos cliente
@@ -32,6 +36,7 @@ public class GestorFacturacionInSitu {
     private String domicilioFacturacionCliente;
     //Datos de la facturacion
     private Object[] solicitudes;
+    private Object[] impuestos;
 
     public void generarFacturacionInSitu(PeriodoFacturacion[] pf, Propiedad p) {
         getPeriodoActual(pf);
@@ -88,13 +93,14 @@ public class GestorFacturacionInSitu {
     }
 
     private void buscarLecturaAnterior() {
-
+        lecturaAnterior = propiedad.buscarLecturaAnterior(lecturaActual);
     }
 
     private void buscarDatosLecturaActual() {
         valorLecturaActual = lecturaActual.getValorCorregido();
     }
 
+    
     private void calcularConsumoFacturado() {
 
     }
@@ -118,13 +124,13 @@ public class GestorFacturacionInSitu {
 
     private void verificarBonificaciones() {
         Object[] sol = propiedad.buscarBonificaciones();
-        if (sol.length != 0){
+        if (sol.length != 0) {
             solicitudes = sol;
         }
     }
 
     private void buscarImpuestos() {
-
+        impuestos = propiedad.buscarImpuestos(condicionTributariaCliente);
     }
 
     private void calcularConecptosDeFacturacion() {

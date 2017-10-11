@@ -92,7 +92,7 @@ public class Lectura {
     public void generarFactura() {
     }
 
-    ;
+    
     
     public void actualizarEstado(String nombre) {
         this.estado.setNombre(nombre);

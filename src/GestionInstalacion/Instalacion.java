@@ -6,7 +6,9 @@
 package GestionInstalacion;
 
 import GestionInstalacion.Medidor;
+import GestionInstalacion.Lectura;
 import GestionPropiedades.Propiedad;
+import java.util.Date;
 
 /**
  *
@@ -71,4 +73,17 @@ public class Instalacion {
     public Object[] buscarDatosCliente() {
         return propiedad.buscarDatosClientes();
     }
+    
+     public Lectura buscarLecturaAnterior(Lectura lecturaActual) {
+         Medidor ultimo = medidores[0];
+         Date ultimoMedidor = medidores[0].getFechaInstalacion();
+         
+         for (int i = 1; i < medidores.length - 1; i++) {
+             if (ultimoMedidor.before(medidores[i].getFechaInstalacion())){
+                 ultimo = medidores[i];
+             }             
+         }
+         Lectura ultimaL = ultimo.buscarLecturaAnterior(lecturaActual);
+         return ultimaL;
+     }
 }

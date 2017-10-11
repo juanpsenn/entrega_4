@@ -5,6 +5,8 @@
  */
 package GestionPropiedades;
 
+import GestionInstalacion.Instalacion;
+import GestionInstalacion.Lectura;
 import GestionServicio.Servicio;
 
 /**
@@ -19,6 +21,9 @@ public class Propiedad {
     private int numero;
     private int piso;
     private Servicio servicio;
+    private Instalacion instalacion;
+    //Atributos que estan debido a que no hay base de datos
+    private Zona zona;
 
     public int getNroIdentificacionCatastral() {
         return nroIdentificacionCatastral;
@@ -27,19 +32,27 @@ public class Propiedad {
     public float[] buscarMontosBasicos() {
         return servicio.buscarMontosBasicos();
     }
-    
+
     public Object[] buscarDatosClientes() {
         return servicio.buscarDatosCliente();
     }
-    
-   public Object[] buscarBonificaciones(){
-       Object[] b;
-       if (servicio.tieneSolicitudesVigentesYAprobadas() == true){
-           b = servicio.getSolicitudesBonificacion();
-           return b;
-       }
-       
-       b = new Object[1];
-       return b;
-   }
+
+    public Object[] buscarBonificaciones() {
+        Object[] b;
+        if (servicio.tieneSolicitudesVigentesYAprobadas() == true) {
+            b = servicio.getSolicitudesBonificacion();
+            return b;
+        }
+
+        b = new Object[1];
+        return b;
+    }
+
+    public Object[][] buscarImpuestos(String condicionTributaria) {
+        return zona.buscarImpuestos(condicionTributaria);
+    }
+
+    public Lectura buscarLecturaAnterior(Lectura lecturaActual) {
+        return instalacion.buscarLecturaAnterior(lecturaActual);
+    }
 }
