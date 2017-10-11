@@ -101,20 +101,18 @@ public class GestorFacturacionInSitu {
         valorLecturaActual = lecturaActual.getValorCorregido();
     }
 
-    
-    private void calcularConsumoFacturado() {
-
+    private float calcularConsumoFacturado() {
+        return valorLecturaActual - lecturaAnterior.getValorCorregido();
     }
 
     private void calcularDiasDeLectura() {
         Date fechaLecturaActual = lecturaActual.getFechaHoraLectura();
         Date fechaLecturaAnterior = lecturaAnterior.getFechaHoraLectura();
         double diff = fechaLecturaActual.getTime() - fechaLecturaAnterior.getTime();
-        long days = round((diff / (60*60*24*1000)));
-        
+        long days = round((diff / (60 * 60 * 24 * 1000)));
+
         diasDeLectura = days;
-}
-    
+    }
 
     private void buscarMontoBasico(Propiedad p) {
         float[] n = new float[2];
