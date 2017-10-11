@@ -10,7 +10,7 @@ package GestionServicio;
  * @author mickaelacrespo
  */
 public class Categoria {
-    
+
     private int m3BasicosDesde;
     private int m3BasicosHasta;
     private int montoBasico;
@@ -47,11 +47,9 @@ public class Categoria {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    public float getM3Basico(){
-        return (m3BasicosHasta - m3BasicosDesde );
+
+    public float getM3Basico() {
+        return (m3BasicosHasta - m3BasicosDesde);
     }
-    
-    
-    
+
 }

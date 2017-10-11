@@ -1,10 +1,12 @@
 package GestionServicio;
+
 import java.util.Date;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
  * @author mickaelacrespo
@@ -26,7 +28,7 @@ public class SolicitudBonificacion {
 
     public boolean estaVigente() {
         java.util.Date fechaActual = new Date();
-        if (fechaActual.before(fechaFinVigencia)){
+        if (fechaActual.before(fechaFinVigencia)) {
             return true;
         } else {
             return false;
@@ -51,4 +53,3 @@ public class SolicitudBonificacion {
     }
 
 }
-

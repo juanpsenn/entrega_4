@@ -6,7 +6,6 @@
 package GestionServicio;
 
 import java.util.Date;
-import GestionServicio.Categoria;
 import GestionClientes.Cliente;
 import java.util.ArrayList;
 
@@ -36,17 +35,16 @@ public class Servicio {
         } else {
             return false;
         }
-
     }
 
-    public ArrayList buscarDatosCliente(Cliente c) {
-        ArrayList al = New Object[0];
+    public ArrayList<Object> buscarDatosCliente(Cliente c) {
+        ArrayList<Object> al = new ArrayList<>();
 
-        al.add(Cliente.getNro());
-        al.add(Cliente.getApellido());
-        al.add(Cliente.getNombre());
-        al.add(Cliente.getDomicilioFacturacion());
-        al.add(Cliente.buscarCondicionTributaria());
+        al.add(c.getNroCliente());
+        al.add(c.getApellido());
+        al.add(c.getNombre());
+        al.add(c.getDomicilioFacturacion());
+        al.add(c.buscarCondicionTributaria());
 
         return al;
     }
@@ -66,7 +64,6 @@ public class Servicio {
             }
         }
         return false;
-
     }
 
 }
