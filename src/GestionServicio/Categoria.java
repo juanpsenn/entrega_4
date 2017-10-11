@@ -48,6 +48,10 @@ public class Categoria {
         this.nombre = nombre;
     }
     
+    public float getM3Basico(){
+        return (m3BasicosHasta - m3BasicosDesde );
+    }
+    
     
     
 }
