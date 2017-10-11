@@ -49,4 +49,8 @@ public class Medidor implements GestionFacturacion.IAgregado {
     public Object[] buscarDatosPropiedad() {
         return instalacion.buscarDatosPropiedad();
     }
+
+    public Object[] buscarDatosCliente() {
+        return instalacion.buscarDatosCliente();
+    }
 }

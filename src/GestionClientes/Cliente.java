@@ -13,13 +13,13 @@ public class Cliente {
    
     private String nombre;
     private String apellido;
-    private double dni;
-    private double nro;    
+    private long dni;
+    private long nro;    
     private String fechaActualizacion;
     private CondicionTributaria condicionTributaria;
     private DomicilioFacturacion domicilioFacturacion;
 
-    public Cliente(String nombre, String apellido, double dni, double nro, String fechaActualizacion, CondicionTributaria condicionTributaria, DomicilioFacturacion domicilioFacturacion) {
+    public Cliente(String nombre, String apellido, long dni, long nro, String fechaActualizacion, CondicionTributaria condicionTributaria, DomicilioFacturacion domicilioFacturacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -49,7 +49,7 @@ public class Cliente {
         return dni;
     }
 
-    public void setDni(double dni) {
+    public void setDni(long dni) {
         this.dni = dni;
     }
 
@@ -57,7 +57,7 @@ public class Cliente {
         return nro;
     }
 
-    public void setNroCliente(double nro) {
+    public void setNroCliente(long nro) {
         this.nro = nro;
     }
 

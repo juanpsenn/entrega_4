@@ -24,6 +24,12 @@ public class GestorFacturacionInSitu {
     private float valorLecturaActual;
     private float montoBasico;
     private float m3Basico;
+    //Datos cliente
+    private String nombreCliente;
+    private String apellidoCliente;
+    private long nroCliente;
+    private String condicionTributariaCliente;
+    private String domicilioFacturacionCliente;
 
     public void generarFacturacionInSitu(PeriodoFacturacion[] pf, Propiedad p) {
         getPeriodoActual(pf);
@@ -71,7 +77,12 @@ public class GestorFacturacionInSitu {
     }
 
     private void buscarDatosCliente() {
-
+        Object[] temp = lecturaActual.buscarDatosCliente();
+        this.nroCliente = (long) temp[0];
+        this.apellidoCliente = (String) temp[1];
+        this.nombreCliente = (String) temp[2];
+        this.domicilioFacturacionCliente = (String) temp[3];
+        this.condicionTributariaCliente = (String) temp[4];
     }
 
     private void buscarLecturaAnterior() {

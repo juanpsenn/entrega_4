@@ -68,4 +68,7 @@ public class Instalacion {
         return n;
     }
 
+    public Object[] buscarDatosCliente() {
+        return propiedad.buscarDatosClientes();
+    }
 }

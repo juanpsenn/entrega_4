@@ -7,7 +7,6 @@ package GestionServicio;
 
 import java.util.Date;
 import GestionClientes.Cliente;
-import java.util.ArrayList;
 
 /**
  *
@@ -41,12 +40,12 @@ public class Servicio {
 
     public Object[] buscarDatosCliente() {
         Object[] n = new Object[5];
-        
+
         n[0] = cliente.getNroCliente();
         n[1] = cliente.getApellido();
         n[2] = cliente.getNombre();
-        n[2] = cliente.getDomicilioFacturacion();
-        n[2] = cliente.buscarCondicionTributaria();
+        n[3] = cliente.getDomicilioFacturacion();
+        n[4] = cliente.buscarCondicionTributaria();
 
         return n;
     }

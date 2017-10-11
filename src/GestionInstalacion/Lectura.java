@@ -20,7 +20,7 @@ public class Lectura {
     private float valorLectura;
     private Estado estado;
     private Factura factura;
-    //Metodos que estan debido a que no hay base de datos
+    //Atributos que estan debido a que no hay base de datos
     private Medidor medidor;
 
     public Lectura(float estimada, Date fechaHoraLectura, float valorCorregido, float valorLectura, Estado estado, Factura factura) {
@@ -83,4 +83,20 @@ public class Lectura {
     public Object[] buscarDatosPropiedad() {
         return medidor.buscarDatosPropiedad();
     }
+
+    public Object[] buscarDatosCliente() {
+        return medidor.buscarDatosCliente();
+    }
+
+    //Implementar al final
+    public void generarFactura() {
+    }
+
+    ;
+    
+    public void actualizarEstado(String nombre) {
+        this.estado.setNombre(nombre);
+        this.estado.setAmbito("Lectura");
+    }
+
 }
