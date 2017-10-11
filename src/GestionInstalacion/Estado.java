@@ -10,7 +10,7 @@ package GestionInstalacion;
  * @author mickaelacrespo
  */
 public class Estado {
-    
+
     public String ambito;
     public String nombre;
 
@@ -34,6 +34,17 @@ public class Estado {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    
+
+    public boolean esCorregidaFacturada() {
+        return ("Corregida facturada".equals(nombre));
+    }
+
+    public boolean esFacturadaSinControl() {
+        return ("Facturada sin control".equals(nombre));
+    }
+
+    public boolean esAmbitoLectura() {
+        return ("Lectura".equals(ambito));
+    }
+
 }
