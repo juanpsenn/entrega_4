@@ -30,6 +30,8 @@ public class GestorFacturacionInSitu {
     private long nroCliente;
     private String condicionTributariaCliente;
     private String domicilioFacturacionCliente;
+    //Datos de la facturacion
+    private Object[] solicitudes;
 
     public void generarFacturacionInSitu(PeriodoFacturacion[] pf, Propiedad p) {
         getPeriodoActual(pf);
@@ -115,7 +117,10 @@ public class GestorFacturacionInSitu {
     }
 
     private void verificarBonificaciones() {
-
+        Object[] sol = propiedad.buscarBonificaciones();
+        if (sol.length != 0){
+            solicitudes = sol;
+        }
     }
 
     private void buscarImpuestos() {

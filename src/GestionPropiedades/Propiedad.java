@@ -31,4 +31,15 @@ public class Propiedad {
     public Object[] buscarDatosClientes() {
         return servicio.buscarDatosCliente();
     }
+    
+   public Object[] buscarBonificaciones(){
+       Object[] b;
+       if (servicio.tieneSolicitudesVigentesYAprobadas() == true){
+           b = servicio.getSolicitudesBonificacion();
+           return b;
+       }
+       
+       b = new Object[1];
+       return b;
+   }
 }

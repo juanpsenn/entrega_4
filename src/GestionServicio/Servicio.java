@@ -67,4 +67,7 @@ public class Servicio {
         return false;
     }
 
+    public Object[] getSolicitudesBonificacion(){
+        return solicitudes;
+    }
 }
