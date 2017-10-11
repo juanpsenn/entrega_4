@@ -20,6 +20,8 @@ public class Servicio {
     private Categoria categoria;
     private SolicitudBonificacion solicitudes[];
     private Date fechaBaja;
+    //Atributos que estan solo porque no hay base de datos
+    private Cliente cliente;
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
@@ -37,16 +39,16 @@ public class Servicio {
         }
     }
 
-    public ArrayList<Object> buscarDatosCliente(Cliente c) {
-        ArrayList<Object> al = new ArrayList<>();
+    public Object[] buscarDatosCliente() {
+        Object[] n = new Object[5];
+        
+        n[0] = cliente.getNroCliente();
+        n[1] = cliente.getApellido();
+        n[2] = cliente.getNombre();
+        n[2] = cliente.getDomicilioFacturacion();
+        n[2] = cliente.buscarCondicionTributaria();
 
-        al.add(c.getNroCliente());
-        al.add(c.getApellido());
-        al.add(c.getNombre());
-        al.add(c.getDomicilioFacturacion());
-        al.add(c.buscarCondicionTributaria());
-
-        return al;
+        return n;
     }
 
     public float[] buscarMontosBasicos() {
