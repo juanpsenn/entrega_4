@@ -18,4 +18,5 @@ public class Localidad {
     private Impuesto impuestosDeLocalidad[];
     
     
+    
 }

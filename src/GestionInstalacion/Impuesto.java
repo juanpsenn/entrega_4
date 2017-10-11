@@ -46,5 +46,21 @@ public class Impuesto {
     public void setCondicionTributaria(CondicionTributaria condicionTributaria) {
         this.condicionTributaria = condicionTributaria;
     }
+    
+    public boolean tieneCondicionTributaria(){
+        if (condicionTributaria == null) 
+        {
+            return false;
+        }
+        return true;
+    }
+    
+    public boolean esCondicionTributariaCliente(String cT){
+        String nombreCT = condicionTributaria.getNombre();
+        if (nombreCT == cT){
+            return true;
+        }
+        return false;
+    }
 
 }
