@@ -4,6 +4,7 @@ import java.util.Date;
 import GestionFacturacion.PeriodoFacturacion;
 import GestionPropiedades.Propiedad;
 import GestionInstalacion.Lectura;
+import static java.lang.Math.round;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,10 +20,10 @@ public class GestorFacturacionInSitu {
     private Date fechaActual;
     private PeriodoFacturacion periodoActual;
     //Lecturas
-    //LecturaActual
     private Lectura lecturaActual;
     private float valorLecturaActual;
     private Lectura lecturaAnterior;
+    private long diasDeLectura;
     //Propieda
     private Propiedad propiedad;
     private int nroIDCatastral;
@@ -106,8 +107,14 @@ public class GestorFacturacionInSitu {
     }
 
     private void calcularDiasDeLectura() {
-
-    }
+        Date fechaLecturaActual = lecturaActual.getFechaHoraLectura();
+        Date fechaLecturaAnterior = lecturaAnterior.getFechaHoraLectura();
+        double diff = fechaLecturaActual.getTime() - fechaLecturaAnterior.getTime();
+        long days = round((diff / (60*60*24*1000)));
+        
+        diasDeLectura = days;
+}
+    
 
     private void buscarMontoBasico(Propiedad p) {
         float[] n = new float[2];
