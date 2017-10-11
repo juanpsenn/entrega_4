@@ -7,12 +7,13 @@ package GestionInstalacion;
 
 import GestionFacturacion.Factura;
 import java.util.Date;
+
 /**
  *
  * @author mickaelacrespo
  */
 public class Lectura {
-    
+
     private float estimada;
     private Date fechaHoraLectura;
     private float valorCorregido;
@@ -78,7 +79,8 @@ public class Lectura {
     public void setFactura(Factura factura) {
         this.factura = factura;
     }
-public Object[] buscarDatosPropiedad(){
-    return medidor.buscarDatosPropiedad();
-}
+
+    public Object[] buscarDatosPropiedad() {
+        return medidor.buscarDatosPropiedad();
+    }
 }

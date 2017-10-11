@@ -8,16 +8,14 @@ package GestionInstalacion;
 import GestionFacturacion.IIterador;
 import GestionFacturacion.IteradorLectura;
 
-
-
 /**
  *
  * @author mickaelacrespo
  */
 public class Medidor implements GestionFacturacion.IAgregado {
-    
+
     private int numero;
-    private Lectura lecturas[];    
+    private Lectura lecturas[];
     //Atributos que estan solo porque no hay base de datos
     private Instalacion instalacion;
 
@@ -44,11 +42,11 @@ public class Medidor implements GestionFacturacion.IAgregado {
 
     @Override
     public IIterador crearIterador(Object[] elementos) {
-        IteradorLectura il = new IteradorLectura(lecturas); 
+        IteradorLectura il = new IteradorLectura(lecturas);
         return il;
     }
-    
-    public Object[] buscarDatosPropiedad(){
+
+    public Object[] buscarDatosPropiedad() {
         return instalacion.buscarDatosPropiedad();
     }
 }

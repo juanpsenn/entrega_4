@@ -18,7 +18,7 @@ public class Instalacion {
     private String fechaRetiro;
     private int nroOrdenInstalacion;
     private Medidor medidores[];
-        //Atributos que estan solo porque no hay base de datos
+    //Atributos que estan solo porque no hay base de datos
     private Propiedad propiedad;
 
     public Instalacion(String fechaInstalacion, String fechaRetiro, int nroOrdenInstalacion, Medidor[] medidores) {
@@ -59,13 +59,13 @@ public class Instalacion {
     public void setMedidores(Medidor[] medidores) {
         this.medidores = medidores;
     }
-    
-    public Object[] buscarDatosPropiedad(){
+
+    public Object[] buscarDatosPropiedad() {
         Object[] n = new Object[2];
         n[0] = propiedad.getNroIdentificacionCatastral();
         n[1] = propiedad;
-        
+
         return n;
     }
-    
+
 }

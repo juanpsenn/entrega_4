@@ -24,9 +24,6 @@ public class Propiedad {
         return nroIdentificacionCatastral;
     }
 
-    
-    
-    
     public float[] buscarMontosBasicos() {
         return servicio.buscarMontosBasicos();
     }
