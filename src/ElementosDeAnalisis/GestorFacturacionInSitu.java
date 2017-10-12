@@ -1,6 +1,7 @@
 package ElementosDeAnalisis;
 
 import GestionFacturacion.ConceptoFacturado;
+import GestionFacturacion.Factura;
 import java.util.Date;
 import GestionFacturacion.PeriodoFacturacion;
 import GestionPropiedades.Propiedad;
@@ -43,8 +44,9 @@ public class GestorFacturacionInSitu {
     private float montoBasico;
     private Object[][] conceptosFacturados;
     private float totalFacturacion;
+    private Factura factura;
 
-    public void generarFacturacionInSitu(PeriodoFacturacion[] pf, Propiedad p) {
+    public void generarFacturacionInSitu(PeriodoFacturacion[] pf, Propiedad p, String nroF) {
         getPeriodoActual(pf);
         buscarDatosPropiedad();
         buscarDatosCliente();
@@ -58,8 +60,9 @@ public class GestorFacturacionInSitu {
         buscarImpuestos();
         calcularConceptosDeFacturacion();
         calcularTotalFactura();
-        generarFactura();
-        imprimirFactura();
+//        Agregar llamadas a metodos 56 y 57
+        generarFactura(nroF);
+//        imprimirFactura(); No es necesario para la materia.
         finCU();
 
     }
@@ -177,13 +180,14 @@ public class GestorFacturacionInSitu {
 
     }
 
-    private void generarFactura() {
+    private void generarFactura(String nroFactura) {
+        factura = lecturaActual.generarFactura(diasDeLectura, consumoFacturado, nroFactura, periodoActual, totalFacturacion, conceptosFacturados, impuestos);
 
     }
 
-    private void imprimirFactura() {
-
-    }
+//    private void imprimirFactura() {
+//
+//    }
 
     private void finCU() {
 

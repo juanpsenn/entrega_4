@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package GestionFacturacion;
+import java.util.Date;
 
 /**
  *
@@ -12,25 +13,46 @@ package GestionFacturacion;
 public class Factura {
     
     
-    private int diasDeLecturaFacturados;
-    private String fechaFacturacion;
-    private int m3Consumidos;
-    private int nroFactura;
-    private int numero;
+    private long diasDeLecturaFacturados;
+    private Date fechaFacturacion;
+    private float m3Consumidos;
+    private String nroFactura;
     private PeriodoFacturacion periodoFacturacion;
     private DetalleConceptoFacturado detalles[];
+    private float total;
 
-    public Factura(int diasDeLecturaFacturados, String fechaFacturacion, int m3Consumidos, int nroFactura, int numero, PeriodoFacturacion periodoFacturacion, DetalleConceptoFacturado[] detalles) {
-        this.diasDeLecturaFacturados = diasDeLecturaFacturados;
-        this.fechaFacturacion = fechaFacturacion;
-        this.m3Consumidos = m3Consumidos;
+    public Factura(long diasDeLectura,float consumoFacturado,String nroFactura,PeriodoFacturacion periodoActual,float totalFacturacion,Object[][] conceptosFacturados, Object[][] impuestos) {
+        this.diasDeLecturaFacturados = diasDeLectura;
+        this.fechaFacturacion = new Date();
+        this.m3Consumidos = consumoFacturado;
         this.nroFactura = nroFactura;
-        this.numero = numero;
-        this.periodoFacturacion = periodoFacturacion;
-        this.detalles = detalles;
+        this.periodoFacturacion = periodoActual;
+        this.total = totalFacturacion;
+        
+        int d = conceptosFacturados.length + impuestos.length;
+        detalles = new DetalleConceptoFacturado[d];
+        int usado = 0;
+        for (int i = 0; i < conceptosFacturados.length; i++) {
+            if (conceptosFacturados[0][i] != null) {
+                usado++;
+                String nombre = (String) conceptosFacturados[0][i];
+                int monto = (int) conceptosFacturados[1][i];
+                detalles[i] = new DetalleConceptoFacturado(monto,nombre);
+            }  
+        }
+        
+                for (int i = usado; i < impuestos.length + usado; i++) {
+            if (impuestos[0][i] != null) {
+                String nombre = (String) impuestos[0][i];
+                int monto = (int) impuestos[1][i];
+                detalles[i] = new DetalleConceptoFacturado(monto,nombre);
+            }  
+        }
+        
+        
     }
 
-    public int getDiasDeLecturaFacturados() {
+    public long getDiasDeLecturaFacturados() {
         return diasDeLecturaFacturados;
     }
 
@@ -38,15 +60,15 @@ public class Factura {
         this.diasDeLecturaFacturados = diasDeLecturaFacturados;
     }
 
-    public String getFechaFacturacion() {
+    public Date getFechaFacturacion() {
         return fechaFacturacion;
     }
 
-    public void setFechaFacturacion(String fechaFacturacion) {
+    public void setFechaFacturacion(Date fechaFacturacion) {
         this.fechaFacturacion = fechaFacturacion;
     }
 
-    public int getM3Consumidos() {
+    public float getM3Consumidos() {
         return m3Consumidos;
     }
 
@@ -54,20 +76,12 @@ public class Factura {
         this.m3Consumidos = m3Consumidos;
     }
 
-    public int getNroFactura() {
+    public String getNroFactura() {
         return nroFactura;
     }
 
-    public void setNroFactura(int nroFactura) {
+    public void setNroFactura(String nroFactura) {
         this.nroFactura = nroFactura;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
     }
 
     public PeriodoFacturacion getPeriodoFacturacion() {

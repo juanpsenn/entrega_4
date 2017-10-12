@@ -12,6 +12,13 @@ package GestionFacturacion;
 public class DetalleConceptoFacturado {
     
     private int subtotal;
-    private ConceptoFacturado detalleFacturado;
+    private String nombre;
+
+    public DetalleConceptoFacturado(int subtotal, String nombre) {
+        this.subtotal = subtotal;
+        this.nombre = nombre;
+    }
+    
+    
     
 }

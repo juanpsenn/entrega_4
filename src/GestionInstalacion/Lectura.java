@@ -6,6 +6,7 @@
 package GestionInstalacion;
 
 import GestionFacturacion.Factura;
+import GestionFacturacion.PeriodoFacturacion;
 import java.util.Date;
 
 /**
@@ -98,5 +99,11 @@ public class Lectura {
         this.estado.setNombre(nombre);
         this.estado.setAmbito("Lectura");
     }
+    
+    public Factura generarFactura(long diasDeLectura,float consumoFacturado,String nroFactura,PeriodoFacturacion periodoActual,float totalFacturacion,Object[][] conceptosFacturados, Object[][] impuestos) {
+        Factura factura = new Factura(diasDeLectura,consumoFacturado,nroFactura,periodoActual,totalFacturacion,conceptosFacturados,impuestos);
+        return factura;
+    }
+            
 
 }
