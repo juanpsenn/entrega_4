@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package GestionFacturacion;
+
 import java.util.Date;
 
 /**
@@ -11,8 +12,7 @@ import java.util.Date;
  * @author mickaelacrespo
  */
 public class Factura {
-    
-    
+
     private long diasDeLecturaFacturados;
     private Date fechaFacturacion;
     private float m3Consumidos;
@@ -21,14 +21,14 @@ public class Factura {
     private DetalleConceptoFacturado detalles[];
     private float total;
 
-    public Factura(long diasDeLectura,float consumoFacturado,String nroFactura,PeriodoFacturacion periodoActual,float totalFacturacion,Object[][] conceptosFacturados, Object[][] impuestos) {
+    public Factura(long diasDeLectura, float consumoFacturado, String nroFactura, PeriodoFacturacion periodoActual, float totalFacturacion, Object[][] conceptosFacturados, Object[][] impuestos) {
         this.diasDeLecturaFacturados = diasDeLectura;
         this.fechaFacturacion = new Date();
         this.m3Consumidos = consumoFacturado;
         this.nroFactura = nroFactura;
         this.periodoFacturacion = periodoActual;
         this.total = totalFacturacion;
-        
+
         int d = conceptosFacturados.length + impuestos.length;
         detalles = new DetalleConceptoFacturado[d];
         int usado = 0;
@@ -37,21 +37,20 @@ public class Factura {
                 usado++;
                 String nombre = (String) conceptosFacturados[0][i];
                 float monto = (float) conceptosFacturados[1][i];
-                detalles[i] = new DetalleConceptoFacturado(monto,nombre);
-                System.out.println("Concepto i " + i);
-                System.out.println("Usado " + usado);
-            }  
+                detalles[i] = new DetalleConceptoFacturado(monto, nombre);
+            }
         }
-        
-                for (int i = usado; i < impuestos.length + usado; i++) {
+
+        for (int i = usado; i < impuestos.length + usado - 1; i++) {
             if (impuestos[0][i] != null) {
                 String nombre = (String) impuestos[0][i];
                 float monto = (float) impuestos[1][i];
-                detalles[i] = new DetalleConceptoFacturado(monto,nombre);
-            }  
+                detalles[i] = new DetalleConceptoFacturado(monto, nombre);
+
+
+            }
         }
-        
-        
+
     }
 
     public long getDiasDeLecturaFacturados() {
