@@ -17,6 +17,7 @@ public class Medidor implements GestionFacturacion.IAgregado {
     private int numero;
     private Lectura lecturas[];
     private Date fechaInstalacion;
+    private String marca;
     //Atributos que estan solo porque no hay base de datos
     private Instalacion instalacion;
 
@@ -25,10 +26,11 @@ public class Medidor implements GestionFacturacion.IAgregado {
         this.lecturas = lecturas;
     }
 
-    public Medidor(int numero, Lectura[] lecturas, Date fechaInstalacion) {
+    public Medidor(int numero, Lectura[] lecturas, Date fechaInstalacion, String marca) {
         this.numero = numero;
         this.lecturas = lecturas;
         this.fechaInstalacion = fechaInstalacion;
+        this.marca = marca;
     }
 
     public void setInstalacion(Instalacion instalacion) {
