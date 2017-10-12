@@ -29,13 +29,14 @@ public class Localidad {
         Object[][] valores = new Object[2][impuestosDeLocalidad.length];
 
         for (int i = 0; i < impuestosDeLocalidad.length; i++) {
-            if (impuestosDeLocalidad[i].tieneCondicionTributaria() == false) {
-                valores[0][i] = impuestosDeLocalidad[i].getNombre();
-                valores[1][i] = impuestosDeLocalidad[i].getMontoFijo();
+            Impuesto im = (Impuesto) impuestosDeLocalidad[i];
+            if (im.tieneCondicionTributaria() == false) {
+                valores[0][i] = im.getNombre();
+                valores[1][i] = im.getMontoFijo();
 
-            } else if (impuestosDeLocalidad[i].esCondicionTributariaCliente(condicionTributaria) == true) {
-                valores[0][i] = impuestosDeLocalidad[i].getNombre();
-                valores[1][i] = impuestosDeLocalidad[i].getMontoFijo();
+            } else if (im.esCondicionTributariaCliente(condicionTributaria) == true) {
+                valores[0][i] = im.getNombre();
+                valores[1][i] = im.getMontoFijo();
             }
 
         }

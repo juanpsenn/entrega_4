@@ -11,10 +11,10 @@ package GestionFacturacion;
  */
 public class DetalleConceptoFacturado {
     
-    private int subtotal;
+    private float subtotal;
     private String nombre;
 
-    public DetalleConceptoFacturado(int subtotal, String nombre) {
+    public DetalleConceptoFacturado(float subtotal, String nombre) {
         this.subtotal = subtotal;
         this.nombre = nombre;
     }

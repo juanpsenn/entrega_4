@@ -131,7 +131,7 @@ public class Main {
         CondicionTributaria ct1 = new CondicionTributaria("Monotributista",10);
         Impuesto imp1 = new Impuesto("IVA",20);
         Impuesto imp2 = new Impuesto("Impuesto Monotributo",10,ct1);
-        Impuesto[] impuestos = new Impuesto[1];
+        Impuesto[] impuestos = new Impuesto[2];
         impuestos[0] = imp1;
         impuestos[1] = imp2;
         
