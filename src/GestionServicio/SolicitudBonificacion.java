@@ -1,6 +1,7 @@
 package GestionServicio;
 
 import java.util.Date;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,6 +18,20 @@ public class SolicitudBonificacion {
     private Date fechaFinVigencia;
     private Date fechaRechazo;
     private Date fechaSolicitud;
+
+
+    public SolicitudBonificacion(Date fechaSolicitud, Date fechaAprobacion, Date fechaFinVigencia) {
+        this.fechaAprobacion = fechaAprobacion;
+        this.fechaFinVigencia = fechaFinVigencia;
+        this.fechaSolicitud = fechaSolicitud;
+    }
+
+    public SolicitudBonificacion(Date fechaSolicitud, Date fechaRechazo) {
+        this.fechaRechazo = fechaRechazo;
+        this.fechaSolicitud = fechaSolicitud;
+    }
+    
+    
 
     public boolean estaAprobada() {
         if (fechaAprobacion == null) {

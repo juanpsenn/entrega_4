@@ -14,13 +14,18 @@ import GestionClientes.CondicionTributaria;
 public class Impuesto {
     
     private String nombre;
-    private int montoFijo;
+    private float montoFijo;
     private CondicionTributaria condicionTributaria;
 
-    public Impuesto(String nombre, int montoFijo, CondicionTributaria condicionTributaria) {
+    public Impuesto(String nombre, float montoFijo, CondicionTributaria condicionTributaria) {
         this.nombre = nombre;
         this.montoFijo = montoFijo;
         this.condicionTributaria = condicionTributaria;
+    }
+
+    public Impuesto(String nombre, float montoFijo) {
+        this.nombre = nombre;
+        this.montoFijo = montoFijo;
     }
 
     public String getNombre() {
@@ -31,11 +36,11 @@ public class Impuesto {
         this.nombre = nombre;
     }
 
-    public int getMontoFijo() {
+    public float getMontoFijo() {
         return montoFijo;
     }
 
-    public void setMontoFijo(int montoFijo) {
+    public void setMontoFijo(float montoFijo) {
         this.montoFijo = montoFijo;
     }
 

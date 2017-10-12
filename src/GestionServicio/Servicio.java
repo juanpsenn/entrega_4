@@ -13,6 +13,7 @@ import GestionClientes.Cliente;
  * @author mickaelacrespo
  */
 public class Servicio {
+    
 
     private Date fechaAlta;
     private Date fechaDeSolicitud;
@@ -21,6 +22,19 @@ public class Servicio {
     private Date fechaBaja;
     //Atributos que estan solo porque no hay base de datos
     private Cliente cliente;
+
+    public Servicio(Date fechaAlta, Date fechaDeSolicitud, Categoria categoria, SolicitudBonificacion[] solicitudes) {
+        this.fechaAlta = fechaAlta;
+        this.fechaDeSolicitud = fechaDeSolicitud;
+        this.categoria = categoria;
+        this.solicitudes = solicitudes;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+    
+    
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;

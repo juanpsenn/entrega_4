@@ -17,6 +17,13 @@ public class PeriodoFacturacion {
     private Date fechaHasta;
     private String nombrePeriodo;
 
+    public PeriodoFacturacion(Date fechaDesde, Date fechaHasta, String nombrePeriodo) {
+        this.fechaDesde = fechaDesde;
+        this.fechaHasta = fechaHasta;
+        this.nombrePeriodo = nombrePeriodo;
+    }
+
+    
     public Date getFechaDesde() {
         return fechaDesde;
     }

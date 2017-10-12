@@ -16,6 +16,15 @@ public class Categoria {
     private int montoBasico;
     private String nombre;
 
+    public Categoria(int m3BasicosDesde, int m3BasicosHasta, int montoBasico, String nombre) {
+        this.m3BasicosDesde = m3BasicosDesde;
+        this.m3BasicosHasta = m3BasicosHasta;
+        this.montoBasico = montoBasico;
+        this.nombre = nombre;
+    }
+
+    
+    
     public int getM3BasicosDesde() {
         return m3BasicosDesde;
     }

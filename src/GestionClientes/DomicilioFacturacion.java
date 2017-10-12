@@ -5,6 +5,8 @@
  */
 package GestionClientes;
 
+import java.util.Date;
+
 /**
  *
  * @author mickaelacrespo
@@ -14,11 +16,11 @@ public class DomicilioFacturacion {
     private String calle;
     private String departamento;
     private String fechaFinVigencia;
-    private String fechaInicioVigencia ;
+    private Date fechaInicioVigencia ;
     private int numero; 
     private int piso;
 
-    public DomicilioFacturacion(String calle, String departamento, String fechaInicioVigencia, int numero, int piso) {
+    public DomicilioFacturacion(String calle, String departamento, Date fechaInicioVigencia, int numero, int piso) {
         this.calle = calle;
         this.departamento = departamento;
         this.fechaInicioVigencia = fechaInicioVigencia;
@@ -50,11 +52,11 @@ public class DomicilioFacturacion {
         this.fechaFinVigencia = fechaFinVigencia;
     }
 
-    public String getFechaInicioVigencia() {
+    public Date getFechaInicioVigencia() {
         return fechaInicioVigencia;
     }
 
-    public void setFechaInicioVigencia(String fechaInicioVigencia) {
+    public void setFechaInicioVigencia(Date fechaInicioVigencia) {
         this.fechaInicioVigencia = fechaInicioVigencia;
     }
 

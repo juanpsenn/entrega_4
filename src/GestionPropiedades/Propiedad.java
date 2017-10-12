@@ -25,6 +25,20 @@ public class Propiedad {
     //Atributos que estan debido a que no hay base de datos
     private Zona zona;
 
+    public Propiedad(String calle, String departamento, int nroIdentificacionCatastral, int numero, int piso, Servicio servicio, Instalacion instalacion) {
+        this.calle = calle;
+        this.departamento = departamento;
+        this.nroIdentificacionCatastral = nroIdentificacionCatastral;
+        this.numero = numero;
+        this.piso = piso;
+        this.servicio = servicio;
+        this.instalacion = instalacion;
+    }
+
+    public void setZona(Zona zona) {
+        this.zona = zona;
+    }
+
     public int getNroIdentificacionCatastral() {
         return nroIdentificacionCatastral;
     }

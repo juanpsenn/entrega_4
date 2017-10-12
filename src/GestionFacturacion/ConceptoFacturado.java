@@ -14,6 +14,11 @@ public class ConceptoFacturado {
     
     private String nombre;
     private float costo;
+
+    public ConceptoFacturado(String nombre, float costo) {
+        this.nombre = nombre;
+        this.costo = costo;
+    }
     
     
 

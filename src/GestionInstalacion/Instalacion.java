@@ -16,33 +16,38 @@ import java.util.Date;
  */
 public class Instalacion {
 
-    private String fechaInstalacion;
-    private String fechaRetiro;
+    private Date fechaInstalacion;
+    private Date fechaRetiro;
     private int nroOrdenInstalacion;
     private Medidor medidores[];
     //Atributos que estan solo porque no hay base de datos
     private Propiedad propiedad;
 
-    public Instalacion(String fechaInstalacion, String fechaRetiro, int nroOrdenInstalacion, Medidor[] medidores) {
+    public Instalacion(Date fechaInstalacion, int nroOrdenInstalacion, Medidor[] medidores) {
         this.fechaInstalacion = fechaInstalacion;
-        this.fechaRetiro = fechaRetiro;
         this.nroOrdenInstalacion = nroOrdenInstalacion;
         this.medidores = medidores;
     }
 
-    public String getFechaInstalacion() {
+    public void setPropiedad(Propiedad propiedad) {
+        this.propiedad = propiedad;
+    }
+    
+    
+
+    public Date getFechaInstalacion() {
         return fechaInstalacion;
     }
 
-    public void setFechaInstalacion(String fechaInstalacion) {
+    public void setFechaInstalacion(Date fechaInstalacion) {
         this.fechaInstalacion = fechaInstalacion;
     }
 
-    public String getFechaRetiro() {
+    public Date getFechaRetiro() {
         return fechaRetiro;
     }
 
-    public void setFechaRetiro(String fechaRetiro) {
+    public void setFechaRetiro(Date fechaRetiro) {
         this.fechaRetiro = fechaRetiro;
     }
 

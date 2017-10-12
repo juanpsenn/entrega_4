@@ -24,14 +24,18 @@ public class Lectura {
     //Atributos que estan debido a que no hay base de datos
     private Medidor medidor;
 
-    public Lectura(float estimada, Date fechaHoraLectura, float valorCorregido, float valorLectura, Estado estado, Factura factura) {
-        this.estimada = estimada;
+    public Lectura(Date fechaHoraLectura, float valorLectura, Estado estado) {
         this.fechaHoraLectura = fechaHoraLectura;
-        this.valorCorregido = valorCorregido;
+        this.valorCorregido = valorLectura;
         this.valorLectura = valorLectura;
         this.estado = estado;
-        this.factura = factura;
     }
+
+    public void setMedidor(Medidor medidor) {
+        this.medidor = medidor;
+    }
+    
+    
 
     public float getEstimada() {
         return estimada;

@@ -25,6 +25,17 @@ public class Medidor implements GestionFacturacion.IAgregado {
         this.lecturas = lecturas;
     }
 
+    public Medidor(int numero, Lectura[] lecturas, Date fechaInstalacion) {
+        this.numero = numero;
+        this.lecturas = lecturas;
+        this.fechaInstalacion = fechaInstalacion;
+    }
+
+    public void setInstalacion(Instalacion instalacion) {
+        this.instalacion = instalacion;
+    }
+    
+
     public void setFechaInstalacion(Date fechaInstalacion) {
         this.fechaInstalacion = fechaInstalacion;
     }

@@ -5,6 +5,8 @@
  */
 package GestionClientes;
 
+import java.util.Date;
+
 /**
  *
  * @author mickaelacrespo
@@ -15,11 +17,11 @@ public class Cliente {
     private String apellido;
     private long dni;
     private long nro;    
-    private String fechaActualizacion;
+    private Date fechaActualizacion;
     private CondicionTributaria condicionTributaria;
     private DomicilioFacturacion domicilioFacturacion;
 
-    public Cliente(String nombre, String apellido, long dni, long nro, String fechaActualizacion, CondicionTributaria condicionTributaria, DomicilioFacturacion domicilioFacturacion) {
+    public Cliente(String nombre, String apellido, long dni, long nro, Date fechaActualizacion, CondicionTributaria condicionTributaria, DomicilioFacturacion domicilioFacturacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -53,7 +55,7 @@ public class Cliente {
         this.dni = dni;
     }
 
-    public double getNroCliente() {
+    public long getNroCliente() {
         return nro;
     }
 
@@ -61,11 +63,11 @@ public class Cliente {
         this.nro = nro;
     }
 
-    public String getFechaActualizacion() {
+    public Date getFechaActualizacion() {
         return fechaActualizacion;
     }
 
-    public void setFechaActualizacion(String fechaActualizacion) {
+    public void setFechaActualizacion(Date fechaActualizacion) {
         this.fechaActualizacion = fechaActualizacion;
     }
 

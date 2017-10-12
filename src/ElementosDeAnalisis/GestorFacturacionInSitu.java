@@ -67,6 +67,15 @@ public class GestorFacturacionInSitu {
 
     }
 
+    public GestorFacturacionInSitu(ConceptoFacturado[] conceptos, Lectura lecturaActual) {
+        this.conceptos = conceptos;
+        this.lecturaActual = lecturaActual;
+    }
+
+   
+    
+    
+
 //    Metodo sin sentido, durante la implementacion nos dimos cuenta que era innecesario
     private void getFechaActual() {
         fechaActual = new Date();
