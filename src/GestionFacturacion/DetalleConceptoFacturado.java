@@ -12,6 +12,6 @@ package GestionFacturacion;
 public class DetalleConceptoFacturado {
     
     private int subtotal;
-    private DetalleFacturado detalleFacturado;
+    private ConceptoFacturado detalleFacturado;
     
 }
