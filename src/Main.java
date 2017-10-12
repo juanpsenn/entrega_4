@@ -106,7 +106,7 @@ public class Main {
         lecturas[2] = l3;
         lecturas[3] = l4;
         
-        Medidor m1 = new Medidor(1,lecturas,d5);
+        Medidor m1 = new Medidor(1,lecturas,d5,"Pirulo");
         l4.setMedidor(m1);
         l3.setMedidor(m1);
         l2.setMedidor(m1);
