@@ -62,7 +62,7 @@ public class GestorFacturacionInSitu {
         calcularTotalFactura();
 //        Agregar llamadas a metodos 56 y 57
         generarFactura(nroF);
-//        imprimirFactura(); No es necesario para la materia.
+        imprimirFactura();
         finCU();
 
     }
@@ -194,9 +194,10 @@ public class GestorFacturacionInSitu {
 
     }
 
-//    private void imprimirFactura() {
-//
-//    }
+    private void imprimirFactura() {
+        Pantalla panties = new Pantalla();
+        panties.setVisible(true);
+    }
 
     private void finCU() {
 
