@@ -1,3 +1,6 @@
+
+import java.util.Date;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +12,20 @@
  * @author john
  */
 public class Pantalla extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Pantalla
      */
-    public Pantalla() {
+    public Pantalla(String nroFactura, Date fechaActual, String condicionTributaria, 
+            long diasLectura, String domicilioFacturacion, Date fechaInstalacion, 
+            Date fechaLecturaAnterior, float m3Consumidos, String marcaMedidor,
+            String nombreCliente, long nroCliente, int nroIDCatastral, int nroMedidor) {
         initComponents();
+        
+    }
+
+    private Pantalla() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -26,73 +37,220 @@ public class Pantalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        titleL = new javax.swing.JLabel();
+        nroFacturaL = new javax.swing.JLabel();
+        fechaActualL = new javax.swing.JLabel();
+        fechaActual = new javax.swing.JTextField();
+        nroFactura = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        nroIDCatastralL = new javax.swing.JLabel();
+        nroIDCatastral = new javax.swing.JTextField();
+        nombreClienteL = new javax.swing.JLabel();
+        nombreCliente = new javax.swing.JTextField();
+        nroClienteL = new javax.swing.JLabel();
+        nroCliente = new javax.swing.JTextField();
+        domicilioFacturacionL = new javax.swing.JLabel();
+        domicilioFacturacion = new javax.swing.JTextField();
+        condicionTributariaL = new javax.swing.JLabel();
+        condicionTributaria = new javax.swing.JTextField();
+        datosMedidorL = new javax.swing.JLabel();
+        datosClienteL = new javax.swing.JLabel();
+        marcaMedidorL = new javax.swing.JLabel();
+        nroMedidorL = new javax.swing.JLabel();
+        fechaInstalacionL = new javax.swing.JLabel();
+        marcaMedidor = new javax.swing.JTextField();
+        nroMedidor = new javax.swing.JTextField();
+        fechaInstalacion = new javax.swing.JTextField();
+        datosLecturaL = new javax.swing.JLabel();
+        fechaLecturaAnteriorL = new javax.swing.JLabel();
+        fechaLecturaActualL = new javax.swing.JLabel();
+        diasLecturaL = new javax.swing.JLabel();
+        m3ConsumidosL = new javax.swing.JLabel();
+        fechaLecturaAnterior = new javax.swing.JTextField();
+        fechaLecturaActual = new javax.swing.JTextField();
+        diasLectura = new javax.swing.JTextField();
+        m3Consumidos = new javax.swing.JTextField();
+        jSeparator2 = new javax.swing.JSeparator();
+        conceptosL = new javax.swing.JLabel();
+        montoBasicoL = new javax.swing.JLabel();
+        costoImpresionL = new javax.swing.JLabel();
+        subtotalL = new javax.swing.JLabel();
+        impuestoL = new javax.swing.JLabel();
+        IVAL = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Empresa de AGUA SA");
+        titleL.setFont(new java.awt.Font("Ubuntu", 0, 36)); // NOI18N
+        titleL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleL.setText("Empresa de AGUA SA");
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Nro Factura");
+        nroFacturaL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nroFacturaL.setText("Nro Factura");
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Fecha");
+        fechaActualL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fechaActualL.setText("Fecha");
 
-        jLabel4.setText("Identificador catastral propiedad");
+        fechaActual.setEditable(false);
 
-        jLabel5.setText("Cliente");
+        nroFactura.setEditable(false);
 
-        jLabel6.setText("Domicilio de Facturacion");
+        nroIDCatastralL.setText("Identificador catastral propiedad");
 
-        jLabel7.setText("Condicion tributaria ante el IVA");
+        nroIDCatastral.setEditable(false);
+
+        nombreClienteL.setText("Cliente");
+
+        nombreCliente.setEditable(false);
+
+        nroClienteL.setText("Numero cliente");
+
+        nroCliente.setEditable(false);
+
+        domicilioFacturacionL.setText("Domicilio de facturacion");
+
+        domicilioFacturacion.setEditable(false);
+
+        condicionTributariaL.setText("Condicion tributaria ante el IVA");
+
+        condicionTributaria.setEditable(false);
+
+        datosMedidorL.setFont(new java.awt.Font("Ubuntu", 1, 20)); // NOI18N
+        datosMedidorL.setText("Datos medidor");
+
+        datosClienteL.setFont(new java.awt.Font("Ubuntu", 1, 20)); // NOI18N
+        datosClienteL.setText("Datos cliente");
+
+        marcaMedidorL.setText("Marca");
+
+        nroMedidorL.setText("Numero medidor");
+
+        fechaInstalacionL.setText("Fecha instalacion");
+
+        marcaMedidor.setEditable(false);
+
+        nroMedidor.setEditable(false);
+
+        fechaInstalacion.setEditable(false);
+
+        datosLecturaL.setFont(new java.awt.Font("Ubuntu", 1, 20)); // NOI18N
+        datosLecturaL.setText("Datos lectura");
+
+        fechaLecturaAnteriorL.setText("Fecha lectura anterior");
+
+        fechaLecturaActualL.setText("Fecha lectura actual");
+
+        diasLecturaL.setText("Dias de lectura");
+
+        m3ConsumidosL.setText("M(cubicos) consumidos");
+
+        fechaLecturaAnterior.setEditable(false);
+
+        fechaLecturaActual.setEditable(false);
+
+        diasLectura.setEditable(false);
+
+        m3Consumidos.setEditable(false);
+
+        conceptosL.setFont(new java.awt.Font("Ubuntu", 1, 20)); // NOI18N
+        conceptosL.setText("Conceptos");
+
+        montoBasicoL.setText("Monto basico");
+
+        costoImpresionL.setText("Costo impresion");
+
+        subtotalL.setText("Subtotal");
+
+        impuestoL.setText("Impuesto");
+
+        IVAL.setText("IVA");
+
+        jLabel6.setText("Total a facturar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 769, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1)))
-                .addGap(18, 18, 18))
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField5)
-                    .addComponent(jTextField3)
-                    .addComponent(jTextField4)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(datosClienteL)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nroIDCatastralL)
+                                    .addComponent(nombreClienteL)
+                                    .addComponent(nroClienteL)
+                                    .addComponent(domicilioFacturacionL)
+                                    .addComponent(condicionTributariaL))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(nroCliente)
+                                    .addComponent(nroIDCatastral)
+                                    .addComponent(nombreCliente)
+                                    .addComponent(domicilioFacturacion)
+                                    .addComponent(condicionTributaria, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(datosMedidorL)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(fechaInstalacionL)
+                                    .addComponent(nroMedidorL)
+                                    .addComponent(marcaMedidorL))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(marcaMedidor, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                                    .addComponent(nroMedidor)
+                                    .addComponent(fechaInstalacion))))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(fechaLecturaActualL)
+                                .addGap(31, 31, 31)
+                                .addComponent(fechaLecturaActual))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(diasLecturaL)
+                                .addGap(69, 69, 69)
+                                .addComponent(diasLectura))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(fechaLecturaAnteriorL)
+                                .addGap(18, 18, 18)
+                                .addComponent(fechaLecturaAnterior))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(m3ConsumidosL)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(m3Consumidos, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(datosLecturaL)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(9, 9, 9))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(titleL, javax.swing.GroupLayout.PREFERRED_SIZE, 769, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(nroFacturaL, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(nroFactura, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(fechaActualL, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fechaActual)))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(conceptosL)
+                            .addComponent(montoBasicoL)
+                            .addComponent(costoImpresionL)
+                            .addComponent(subtotalL)
+                            .addComponent(impuestoL)
+                            .addComponent(IVAL)
+                            .addComponent(jLabel6))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,33 +258,93 @@ public class Pantalla extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nroFacturaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(nroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(fechaActualL, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fechaActual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(9, 9, 9))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(titleL, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 489, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                        .addComponent(datosMedidorL)
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(marcaMedidorL)
+                            .addComponent(marcaMedidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nroMedidorL)
+                            .addComponent(nroMedidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fechaInstalacionL)
+                            .addComponent(fechaInstalacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(11, 11, 11)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(domicilioFacturacionL)
+                            .addComponent(domicilioFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(condicionTributariaL)
+                            .addComponent(condicionTributaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(datosClienteL)
+                                .addGap(19, 19, 19)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(nroIDCatastralL)
+                                    .addComponent(nroIDCatastral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(nombreClienteL)
+                                    .addComponent(nombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(nroClienteL)
+                                    .addComponent(nroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(datosLecturaL)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(fechaLecturaAnteriorL)
+                                    .addComponent(fechaLecturaAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(fechaLecturaActualL)
+                                    .addComponent(fechaLecturaActual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(diasLecturaL)
+                                    .addComponent(diasLectura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(11, 11, 11)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(m3ConsumidosL)
+                                    .addComponent(m3Consumidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 43, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(conceptosL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(montoBasicoL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(costoImpresionL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(subtotalL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(impuestoL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(IVAL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel6)
+                .addGap(0, 167, Short.MAX_VALUE))
         );
 
         pack();
@@ -168,19 +386,46 @@ public class Pantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel IVAL;
+    private javax.swing.JLabel conceptosL;
+    private javax.swing.JTextField condicionTributaria;
+    private javax.swing.JLabel condicionTributariaL;
+    private javax.swing.JLabel costoImpresionL;
+    private javax.swing.JLabel datosClienteL;
+    private javax.swing.JLabel datosLecturaL;
+    private javax.swing.JLabel datosMedidorL;
+    private javax.swing.JTextField diasLectura;
+    private javax.swing.JLabel diasLecturaL;
+    private javax.swing.JTextField domicilioFacturacion;
+    private javax.swing.JLabel domicilioFacturacionL;
+    private javax.swing.JTextField fechaActual;
+    private javax.swing.JLabel fechaActualL;
+    private javax.swing.JTextField fechaInstalacion;
+    private javax.swing.JLabel fechaInstalacionL;
+    private javax.swing.JTextField fechaLecturaActual;
+    private javax.swing.JLabel fechaLecturaActualL;
+    private javax.swing.JTextField fechaLecturaAnterior;
+    private javax.swing.JLabel fechaLecturaAnteriorL;
+    private javax.swing.JLabel impuestoL;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField m3Consumidos;
+    private javax.swing.JLabel m3ConsumidosL;
+    private javax.swing.JTextField marcaMedidor;
+    private javax.swing.JLabel marcaMedidorL;
+    private javax.swing.JLabel montoBasicoL;
+    private javax.swing.JTextField nombreCliente;
+    private javax.swing.JLabel nombreClienteL;
+    private javax.swing.JTextField nroCliente;
+    private javax.swing.JLabel nroClienteL;
+    private javax.swing.JTextField nroFactura;
+    private javax.swing.JLabel nroFacturaL;
+    private javax.swing.JTextField nroIDCatastral;
+    private javax.swing.JLabel nroIDCatastralL;
+    private javax.swing.JTextField nroMedidor;
+    private javax.swing.JLabel nroMedidorL;
+    private javax.swing.JLabel subtotalL;
+    private javax.swing.JLabel titleL;
     // End of variables declaration//GEN-END:variables
 }
