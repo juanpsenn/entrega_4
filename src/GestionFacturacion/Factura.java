@@ -33,22 +33,24 @@ public class Factura {
         detalles = new DetalleConceptoFacturado[d];
         int usado = 0;
         for (int i = 0; i < conceptosFacturados.length; i++) {
-            if (conceptosFacturados[0][i] != null) {
+            if (conceptosFacturados[i][0] != null) {
                 usado++;
-                String nombre = (String) conceptosFacturados[0][i];
-                float monto = (float) conceptosFacturados[1][i];
+                String nombre = (String) conceptosFacturados[i][0];
+                float monto = (float) conceptosFacturados[i][1];
                 detalles[i] = new DetalleConceptoFacturado(monto, nombre);
             }
         }
 
+        int c = 0;
         for (int i = usado; i < impuestos.length + usado - 1; i++) {
-            if (impuestos[0][i] != null) {
-                String nombre = (String) impuestos[0][i];
-                float monto = (float) impuestos[1][i];
+
+            if (impuestos[c][0] != null) {
+                String nombre = (String) impuestos[c][0];
+                float monto = (float) impuestos[c][1];
                 detalles[i] = new DetalleConceptoFacturado(monto, nombre);
 
-
             }
+            c++;
         }
 
     }

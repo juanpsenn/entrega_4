@@ -28,24 +28,71 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="titleL" min="-2" pref="769" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="nroFacturaL" min="-2" pref="85" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="nroFactura" pref="128" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="fechaActualL" min="-2" pref="85" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="fechaActual" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="datosClienteL" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="conceptosL" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="nroIDCatastralL" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nombreClienteL" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nroClienteL" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="domicilioFacturacionL" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="condicionTributariaL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="costoImpresionL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="montoBasicoL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="subtotalL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="impuestoL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="IVAL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="nroCliente" max="32767" attributes="0"/>
-                                  <Component id="nroIDCatastral" max="32767" attributes="0"/>
-                                  <Component id="nombreCliente" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="domicilioFacturacion" max="32767" attributes="0"/>
-                                  <Component id="condicionTributaria" min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="total" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="iva" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="impuesto" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="subtotal" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="montoBasico" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="costoImpresion" min="-2" pref="140" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="condicionTributariaL" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="33" max="32767" attributes="0"/>
+                              <Component id="condicionTributaria" min="-2" pref="140" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="datosClienteL" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="nroIDCatastralL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="nombreClienteL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="nroClienteL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="domicilioFacturacionL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="nroCliente" pref="140" max="32767" attributes="0"/>
+                                      <Component id="nroIDCatastral" max="32767" attributes="0"/>
+                                      <Component id="nombreCliente" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="domicilioFacturacion" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -95,48 +142,6 @@
                       </Group>
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="titleL" min="-2" pref="769" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="nroFacturaL" min="-2" pref="85" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="nroFactura" pref="128" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="fechaActualL" min="-2" pref="85" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="fechaActual" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="conceptosL" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="costoImpresionL" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="montoBasicoL" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="subtotalL" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="impuestoL" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="IVAL" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField6" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="jTextField5" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="jTextField4" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="jTextField3" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="jTextField2" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="jTextField1" min="-2" pref="140" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="0" pref="710" max="32767" attributes="0"/>
-                  </Group>
               </Group>
           </Group>
       </Group>
@@ -159,10 +164,9 @@
                   </Group>
                   <Component id="titleL" min="-2" pref="77" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace pref="2" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="datosMedidorL" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -179,100 +183,104 @@
                           <Component id="fechaInstalacionL" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="fechaInstalacion" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="domicilioFacturacionL" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="domicilioFacturacion" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="condicionTributariaL" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="condicionTributaria" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="datosClienteL" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="nroIDCatastralL" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nroIDCatastral" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="nombreClienteL" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nombreCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="nroClienteL" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
                           <Component id="datosLecturaL" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="fechaLecturaAnteriorL" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="fechaLecturaAnterior" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="datosClienteL" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="nroIDCatastralL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="nroIDCatastral" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="nombreClienteL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="nombreCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="nroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="nroClienteL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="domicilioFacturacionL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="domicilioFacturacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="fechaLecturaActualL" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="fechaLecturaActual" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="diasLecturaL" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="diasLectura" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="m3ConsumidosL" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="m3Consumidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="fechaLecturaAnteriorL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fechaLecturaAnterior" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="fechaLecturaActualL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fechaLecturaActual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="diasLecturaL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="diasLectura" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="m3ConsumidosL" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="m3Consumidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="condicionTributariaL" min="-2" max="-2" attributes="0"/>
+                  <Component id="condicionTributaria" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="conceptosL" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="montoBasicoL" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="montoBasico" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="costoImpresionL" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="costoImpresion" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="subtotalL" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="subtotal" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="impuestoL" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="impuesto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="IVAL" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="iva" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="total" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="143" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="90" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -495,32 +503,32 @@
         <Property name="text" type="java.lang.String" value="Total a facturar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="costoImpresion">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="montoBasico">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="subtotal">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField4">
+    <Component class="javax.swing.JTextField" name="impuesto">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField5">
+    <Component class="javax.swing.JTextField" name="iva">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField6">
+    <Component class="javax.swing.JTextField" name="total">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>

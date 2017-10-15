@@ -62,7 +62,7 @@ public class GestorFacturacionInSitu {
         calcularTotalFactura();
 //        Agregar llamadas a metodos 56 y 57
         generarFactura(nroF);
-        imprimirFactura();
+        imprimirFactura(nroF);
         finCU();
 
     }
@@ -71,10 +71,6 @@ public class GestorFacturacionInSitu {
         this.conceptos = conceptos;
         this.lecturaActual = lecturaActual;
     }
-
-   
-    
-    
 
 //    Metodo sin sentido, durante la implementacion nos dimos cuenta que era innecesario
     private void getFechaActual() {
@@ -159,30 +155,40 @@ public class GestorFacturacionInSitu {
         impuestos = propiedad.buscarImpuestos(condicionTributariaCliente);
     }
 
+//    private void calcularConceptosDeFacturacion() {
+//        Object[][] c = new Object[2][conceptos.length];
+//        c[0][0] = "Basico Propiedad";
+//        c[1][0] = montoBasico;
+//        for (int i = 1; i < conceptos.length - 1; i++) {
+//            if (0 != conceptos[i].getCosto()) {
+//                c[0][i] = conceptos[i].getNombre();
+//                c[1][i] = conceptos[i].getCosto();
+//            }
+//        }
+//        conceptosFacturados = c;
+//
+//    }
+
     private void calcularConceptosDeFacturacion() {
-        Object[][] c = new Object[2][conceptos.length];
+        Object[][] c = new Object[3][2];
         c[0][0] = "Basico Propiedad";
-        c[1][0] = montoBasico;
-        for (int i = 1; i < conceptos.length - 1; i++) {
-            if (0 != conceptos[i].getCosto()) {
-                c[0][i] = conceptos[i].getNombre();
-                c[1][i] = conceptos[i].getCosto();
-            }
-        }
+        c[0][1] = montoBasico;
+        c[1][0] = conceptos[0].getNombre();
+        c[1][1] = conceptos[0].getCosto();
+        c[2][0] = conceptos[1].getNombre();
+        c[2][1] = conceptos[1].getCosto();
         conceptosFacturados = c;
-
     }
-
     private void calcularTotalFactura() {
         float total = 0;
         for (int i = 0; i < conceptosFacturados.length; i++) {
-            if (conceptosFacturados[1][i] != null) {
-                total += (float) conceptosFacturados[1][i];
+            if (conceptosFacturados[i][1] != null) {
+                total += (float) conceptosFacturados[i][1];
             }
         }
         for (int i = 0; i < impuestos.length; i++) {
             if (impuestos[1][i] != null) {
-                total += (float) impuestos[1][i];
+                total += (float) impuestos[i][1];
             }
         }
         totalFacturacion = total;
@@ -194,8 +200,17 @@ public class GestorFacturacionInSitu {
 
     }
 
-    private void imprimirFactura() {
-        Pantalla panties = new Pantalla();
+//    private void imprimirFactura() {
+//        Pantalla panties = new Pantalla();
+//        panties.setVisible(true);
+//    }
+
+    private void imprimirFactura(String nroFactura) {
+        float iva = (float) impuestos[0][1];
+        Pantalla panties = new Pantalla(nroFactura, fechaActual, condicionTributariaCliente, diasDeLectura, domicilioFacturacionCliente,
+                lecturaAnterior.getFechaHoraLectura(), consumoFacturado, nombreCliente + apellidoCliente, nroCliente,
+                nroIDCatastral,(float) conceptosFacturados[0][1],(float) conceptosFacturados[1][1],(float) impuestos[1][1], (float) impuestos[0][1],
+                totalFacturacion);
         panties.setVisible(true);
     }
 

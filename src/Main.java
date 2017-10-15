@@ -96,9 +96,9 @@ public class Main {
         
         
         Lectura l1 = new Lectura(d6,40,e4);
-        Lectura l2 = new Lectura(d7,35,e4);
-        Lectura l3 = new Lectura(d8,50,e4);
-        Lectura l4 = new Lectura(d9,20,e5);
+        Lectura l2 = new Lectura(d7,75,e4);
+        Lectura l3 = new Lectura(d8,125,e4);
+        Lectura l4 = new Lectura(d9,145,e5);
         
         Lectura[] lecturas = new Lectura[4];
         lecturas[0] = l1;
@@ -129,7 +129,7 @@ public class Main {
         p1.setZona(z1);
         
         CondicionTributaria ct1 = new CondicionTributaria("Monotributista",10);
-        Impuesto imp1 = new Impuesto("IVA",20);
+        Impuesto imp1 = new Impuesto("IVA",80);
         Impuesto imp2 = new Impuesto("Impuesto Monotributo",10,ct1);
         Impuesto[] impuestos = new Impuesto[2];
         impuestos[0] = imp1;

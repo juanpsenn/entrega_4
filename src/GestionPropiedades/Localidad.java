@@ -31,12 +31,12 @@ public class Localidad {
         for (int i = 0; i < impuestosDeLocalidad.length; i++) {
             Impuesto im = (Impuesto) impuestosDeLocalidad[i];
             if (im.tieneCondicionTributaria() == false) {
-                valores[0][i] = im.getNombre();
-                valores[1][i] = im.getMontoFijo();
+                valores[i][0] = im.getNombre();
+                valores[i][1] = im.getMontoFijo();
 
             } else if (im.esCondicionTributariaCliente(condicionTributaria) == true) {
-                valores[0][i] = im.getNombre();
-                valores[1][i] = im.getMontoFijo();
+                valores[i][0] = im.getNombre();
+                valores[i][1] = im.getMontoFijo();
             }
 
         }
